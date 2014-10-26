@@ -16,8 +16,6 @@ class TabBarController:UITabBarController
         super.viewDidLoad()
         
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        println(self.viewControllers)
         for rootController in self.viewControllers! as [UINavigationController]
         {
             rootController.tabBarItem.imageInsets = UIEdgeInsetsMake(8, 0, -8, 0)
@@ -27,5 +25,7 @@ class TabBarController:UITabBarController
                 rootController.viewControllers = [storyboard.instantiateViewControllerWithIdentifier("AtomicTableView")]
             }
         }
+        
+        PeriodicElements.sharedPeriodicElements
     }
 }

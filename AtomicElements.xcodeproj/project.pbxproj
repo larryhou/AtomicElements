@@ -17,11 +17,17 @@
 		DBAD3C6219FCF673008DF72E /* 4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5A19FCF673008DF72E /* 4@2x.png */; };
 		DBAD3C6619FCFF7B008DF72E /* NavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD3C6519FCFF7B008DF72E /* NavgationController.swift */; };
 		DBAD3C6819FD01FB008DF72E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD3C6719FD01FB008DF72E /* TabBarController.swift */; };
+		DBAD3C7019FD13B6008DF72E /* AtomicDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD3C6F19FD13B6008DF72E /* AtomicDataSource.swift */; };
+		DBAD3C7319FD16D9008DF72E /* AtomicElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD3C7219FD16D9008DF72E /* AtomicElement.swift */; };
+		DBAD3C7519FD1761008DF72E /* PeriodicElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD3C7419FD1761008DF72E /* PeriodicElements.swift */; };
+		DBAD3C7719FD19F4008DF72E /* Elements.plist in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C7619FD19F4008DF72E /* Elements.plist */; };
+		DBAD3C7919FD3AEB008DF72E /* ElementsParsingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD3C7819FD3AEB008DF72E /* ElementsParsingTests.swift */; };
+		DBAD3CAA19FD3FE1008DF72E /* PeriodicElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD3C7419FD1761008DF72E /* PeriodicElements.swift */; };
+		DBAD3CAB19FD406A008DF72E /* AtomicElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD3C7219FD16D9008DF72E /* AtomicElement.swift */; };
 		DBF8D53D19FCAA9D00000A2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8D53C19FCAA9D00000A2C /* AppDelegate.swift */; };
 		DBF8D54219FCAA9D00000A2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF8D54019FCAA9D00000A2C /* Main.storyboard */; };
 		DBF8D54419FCAA9D00000A2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF8D54319FCAA9D00000A2C /* Images.xcassets */; };
 		DBF8D54719FCAA9D00000A2C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF8D54519FCAA9D00000A2C /* LaunchScreen.xib */; };
-		DBF8D55319FCAA9D00000A2C /* AtomicElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8D55219FCAA9D00000A2C /* AtomicElementsTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,11 @@
 		DBAD3C5A19FCF673008DF72E /* 4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "4@2x.png"; path = "Images/4@2x.png"; sourceTree = "<group>"; };
 		DBAD3C6519FCFF7B008DF72E /* NavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavgationController.swift; sourceTree = "<group>"; };
 		DBAD3C6719FD01FB008DF72E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		DBAD3C6F19FD13B6008DF72E /* AtomicDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicDataSource.swift; sourceTree = "<group>"; };
+		DBAD3C7219FD16D9008DF72E /* AtomicElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicElement.swift; sourceTree = "<group>"; };
+		DBAD3C7419FD1761008DF72E /* PeriodicElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeriodicElements.swift; sourceTree = "<group>"; };
+		DBAD3C7619FD19F4008DF72E /* Elements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Elements.plist; sourceTree = "<group>"; };
+		DBAD3C7819FD3AEB008DF72E /* ElementsParsingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementsParsingTests.swift; sourceTree = "<group>"; };
 		DBF8D53719FCAA9D00000A2C /* AtomicElements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtomicElements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF8D53B19FCAA9D00000A2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBF8D53C19FCAA9D00000A2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,7 +64,6 @@
 		DBF8D54619FCAA9D00000A2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DBF8D54C19FCAA9D00000A2C /* AtomicElementsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AtomicElementsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF8D55119FCAA9D00000A2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBF8D55219FCAA9D00000A2C /* AtomicElementsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AtomicElementsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +102,8 @@
 		DBAD3C6919FD0316008DF72E /* src */ = {
 			isa = PBXGroup;
 			children = (
+				DBAD3C7119FD1684008DF72E /* data */,
+				DBAD3C6E19FD137B008DF72E /* tableViewDataSource */,
 				DBF8D53C19FCAA9D00000A2C /* AppDelegate.swift */,
 				DBAD3C6519FCFF7B008DF72E /* NavgationController.swift */,
 				DBAD3C6719FD01FB008DF72E /* TabBarController.swift */,
@@ -115,6 +127,31 @@
 				DBF8D54019FCAA9D00000A2C /* Main.storyboard */,
 			);
 			name = storyboard;
+			sourceTree = "<group>";
+		};
+		DBAD3C6E19FD137B008DF72E /* tableViewDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				DBAD3C6F19FD13B6008DF72E /* AtomicDataSource.swift */,
+			);
+			name = tableViewDataSource;
+			sourceTree = "<group>";
+		};
+		DBAD3C7119FD1684008DF72E /* data */ = {
+			isa = PBXGroup;
+			children = (
+				DBAD3C7219FD16D9008DF72E /* AtomicElement.swift */,
+				DBAD3C7419FD1761008DF72E /* PeriodicElements.swift */,
+			);
+			name = data;
+			sourceTree = "<group>";
+		};
+		DBAD3C7A19FD3AF7008DF72E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DBAD3C7819FD3AEB008DF72E /* ElementsParsingTests.swift */,
+			);
+			name = src;
 			sourceTree = "<group>";
 		};
 		DBF8D52E19FCAA9D00000A2C = {
@@ -149,6 +186,7 @@
 		DBF8D53A19FCAA9D00000A2C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DBAD3C7619FD19F4008DF72E /* Elements.plist */,
 				DBF8D53B19FCAA9D00000A2C /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -157,7 +195,7 @@
 		DBF8D54F19FCAA9D00000A2C /* AtomicElementsTests */ = {
 			isa = PBXGroup;
 			children = (
-				DBF8D55219FCAA9D00000A2C /* AtomicElementsTests.swift */,
+				DBAD3C7A19FD3AF7008DF72E /* src */,
 				DBF8D55019FCAA9D00000A2C /* Supporting Files */,
 			);
 			path = AtomicElementsTests;
@@ -252,6 +290,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBAD3C6019FCF673008DF72E /* 3@2x.png in Resources */,
+				DBAD3C7719FD19F4008DF72E /* Elements.plist in Resources */,
 				DBAD3C5D19FCF673008DF72E /* 2.png in Resources */,
 				DBAD3C6219FCF673008DF72E /* 4@2x.png in Resources */,
 				DBF8D54219FCAA9D00000A2C /* Main.storyboard in Resources */,
@@ -280,8 +319,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBAD3C6619FCFF7B008DF72E /* NavgationController.swift in Sources */,
+				DBAD3C7319FD16D9008DF72E /* AtomicElement.swift in Sources */,
+				DBAD3C7019FD13B6008DF72E /* AtomicDataSource.swift in Sources */,
 				DBAD3C6819FD01FB008DF72E /* TabBarController.swift in Sources */,
 				DBF8D53D19FCAA9D00000A2C /* AppDelegate.swift in Sources */,
+				DBAD3C7519FD1761008DF72E /* PeriodicElements.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +331,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DBF8D55319FCAA9D00000A2C /* AtomicElementsTests.swift in Sources */,
+				DBAD3CAB19FD406A008DF72E /* AtomicElement.swift in Sources */,
+				DBAD3CAA19FD3FE1008DF72E /* PeriodicElements.swift in Sources */,
+				DBAD3C7919FD3AEB008DF72E /* ElementsParsingTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
