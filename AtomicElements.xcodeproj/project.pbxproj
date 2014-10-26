@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DBAD3C5B19FCF673008DF72E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5319FCF673008DF72E /* 1.png */; };
+		DBAD3C5C19FCF673008DF72E /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5419FCF673008DF72E /* 1@2x.png */; };
+		DBAD3C5D19FCF673008DF72E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5519FCF673008DF72E /* 2.png */; };
+		DBAD3C5E19FCF673008DF72E /* 2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5619FCF673008DF72E /* 2@2x.png */; };
+		DBAD3C5F19FCF673008DF72E /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5719FCF673008DF72E /* 3.png */; };
+		DBAD3C6019FCF673008DF72E /* 3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5819FCF673008DF72E /* 3@2x.png */; };
+		DBAD3C6119FCF673008DF72E /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5919FCF673008DF72E /* 4.png */; };
+		DBAD3C6219FCF673008DF72E /* 4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5A19FCF673008DF72E /* 4@2x.png */; };
+		DBAD3C6619FCFF7B008DF72E /* NavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD3C6519FCFF7B008DF72E /* NavgationController.swift */; };
+		DBAD3C6819FD01FB008DF72E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD3C6719FD01FB008DF72E /* TabBarController.swift */; };
 		DBF8D53D19FCAA9D00000A2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8D53C19FCAA9D00000A2C /* AppDelegate.swift */; };
 		DBF8D53F19FCAA9D00000A2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8D53E19FCAA9D00000A2C /* ViewController.swift */; };
 		DBF8D54219FCAA9D00000A2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF8D54019FCAA9D00000A2C /* Main.storyboard */; };
@@ -26,6 +36,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DBAD3C5319FCF673008DF72E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = Images/1.png; sourceTree = "<group>"; };
+		DBAD3C5419FCF673008DF72E /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1@2x.png"; path = "Images/1@2x.png"; sourceTree = "<group>"; };
+		DBAD3C5519FCF673008DF72E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = Images/2.png; sourceTree = "<group>"; };
+		DBAD3C5619FCF673008DF72E /* 2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "2@2x.png"; path = "Images/2@2x.png"; sourceTree = "<group>"; };
+		DBAD3C5719FCF673008DF72E /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 3.png; path = Images/3.png; sourceTree = "<group>"; };
+		DBAD3C5819FCF673008DF72E /* 3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "3@2x.png"; path = "Images/3@2x.png"; sourceTree = "<group>"; };
+		DBAD3C5919FCF673008DF72E /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 4.png; path = Images/4.png; sourceTree = "<group>"; };
+		DBAD3C5A19FCF673008DF72E /* 4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "4@2x.png"; path = "Images/4@2x.png"; sourceTree = "<group>"; };
+		DBAD3C6519FCFF7B008DF72E /* NavgationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavgationController.swift; sourceTree = "<group>"; };
+		DBAD3C6719FD01FB008DF72E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DBF8D53719FCAA9D00000A2C /* AtomicElements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtomicElements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF8D53B19FCAA9D00000A2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBF8D53C19FCAA9D00000A2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -56,6 +76,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DBAD3C1819FCEBD1008DF72E /* image */ = {
+			isa = PBXGroup;
+			children = (
+				DBAD3C5319FCF673008DF72E /* 1.png */,
+				DBAD3C5419FCF673008DF72E /* 1@2x.png */,
+				DBAD3C5519FCF673008DF72E /* 2.png */,
+				DBAD3C5619FCF673008DF72E /* 2@2x.png */,
+				DBAD3C5719FCF673008DF72E /* 3.png */,
+				DBAD3C5819FCF673008DF72E /* 3@2x.png */,
+				DBAD3C5919FCF673008DF72E /* 4.png */,
+				DBAD3C5A19FCF673008DF72E /* 4@2x.png */,
+			);
+			name = image;
+			sourceTree = "<group>";
+		};
+		DBAD3C6919FD0316008DF72E /* src */ = {
+			isa = PBXGroup;
+			children = (
+				DBF8D53C19FCAA9D00000A2C /* AppDelegate.swift */,
+				DBF8D53E19FCAA9D00000A2C /* ViewController.swift */,
+				DBAD3C6519FCFF7B008DF72E /* NavgationController.swift */,
+				DBAD3C6719FD01FB008DF72E /* TabBarController.swift */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		DBAD3C6A19FD0926008DF72E /* UIAssets */ = {
+			isa = PBXGroup;
+			children = (
+				DBAD3C6B19FD0970008DF72E /* storyboard */,
+				DBAD3C1819FCEBD1008DF72E /* image */,
+			);
+			name = UIAssets;
+			sourceTree = "<group>";
+		};
+		DBAD3C6B19FD0970008DF72E /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				DBF8D54519FCAA9D00000A2C /* LaunchScreen.xib */,
+				DBF8D54019FCAA9D00000A2C /* Main.storyboard */,
+			);
+			name = storyboard;
+			sourceTree = "<group>";
+		};
 		DBF8D52E19FCAA9D00000A2C = {
 			isa = PBXGroup;
 			children = (
@@ -77,11 +141,9 @@
 		DBF8D53919FCAA9D00000A2C /* AtomicElements */ = {
 			isa = PBXGroup;
 			children = (
-				DBF8D53C19FCAA9D00000A2C /* AppDelegate.swift */,
-				DBF8D53E19FCAA9D00000A2C /* ViewController.swift */,
-				DBF8D54019FCAA9D00000A2C /* Main.storyboard */,
+				DBAD3C6919FD0316008DF72E /* src */,
+				DBAD3C6A19FD0926008DF72E /* UIAssets */,
 				DBF8D54319FCAA9D00000A2C /* Images.xcassets */,
-				DBF8D54519FCAA9D00000A2C /* LaunchScreen.xib */,
 				DBF8D53A19FCAA9D00000A2C /* Supporting Files */,
 			);
 			path = AtomicElements;
@@ -192,8 +254,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBAD3C6019FCF673008DF72E /* 3@2x.png in Resources */,
+				DBAD3C5D19FCF673008DF72E /* 2.png in Resources */,
+				DBAD3C6219FCF673008DF72E /* 4@2x.png in Resources */,
 				DBF8D54219FCAA9D00000A2C /* Main.storyboard in Resources */,
+				DBAD3C5E19FCF673008DF72E /* 2@2x.png in Resources */,
+				DBAD3C5F19FCF673008DF72E /* 3.png in Resources */,
+				DBAD3C5B19FCF673008DF72E /* 1.png in Resources */,
+				DBAD3C5C19FCF673008DF72E /* 1@2x.png in Resources */,
 				DBF8D54719FCAA9D00000A2C /* LaunchScreen.xib in Resources */,
+				DBAD3C6119FCF673008DF72E /* 4.png in Resources */,
 				DBF8D54419FCAA9D00000A2C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +282,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBAD3C6619FCFF7B008DF72E /* NavgationController.swift in Sources */,
+				DBAD3C6819FD01FB008DF72E /* TabBarController.swift in Sources */,
 				DBF8D53F19FCAA9D00000A2C /* ViewController.swift in Sources */,
 				DBF8D53D19FCAA9D00000A2C /* AppDelegate.swift in Sources */,
 			);
@@ -407,6 +479,7 @@
 				DBF8D55819FCAA9D00000A2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DBF8D55919FCAA9D00000A2C /* Build configuration list for PBXNativeTarget "AtomicElementsTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +488,7 @@
 				DBF8D55B19FCAA9D00000A2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

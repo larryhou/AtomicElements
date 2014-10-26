@@ -1,0 +1,15 @@
+
+/* Class = "IBUITabBarItem"; title = "State"; ObjectID = "LQp-eR-OZO"; */
+"LQp-eR-OZO.title" = "State";
+
+/* Class = "IBUITabBarItem"; title = "Name"; ObjectID = "kTi-qZ-7ml"; */
+"kTi-qZ-7ml.title" = "Name";
+
+/* Class = "IBUINavigationItem"; title = "Root View Controller"; ObjectID = "lIQ-Iy-10c"; */
+"lIQ-Iy-10c.title" = "Root View Controller";
+
+/* Class = "IBUITabBarItem"; title = "Symbol"; ObjectID = "wbW-pO-7uR"; */
+"wbW-pO-7uR.title" = "Symbol";
+
+/* Class = "IBUITabBarItem"; title = "Number"; ObjectID = "zat-H5-phS"; */
+"zat-H5-phS.title" = "Number";
