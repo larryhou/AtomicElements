@@ -47,7 +47,7 @@ class ElementsParsingTests: XCTestCase
         
         assert(element.atomicNumber == 0, "Default atomic number should be 0")
         assert(element.atomicWeight == 0.0, "Default atomic weight should be 0.0")
-        assert(element.name == "0", "Default name should be empty")
+        assert(element.name == "", "Default name should be empty")
     }
 
 }
