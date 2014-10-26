@@ -8,37 +8,6 @@
 
 import Foundation
 
-extension Int
-{
-    var string:String
-    {
-        return "\(self)"
-    }
-}
-
-extension String
-{
-    var double:Double
-    {
-        return NSString(string: self).doubleValue
-    }
-    
-    var int:Int
-    {
-        if let value = self.toInt()
-        {
-            return value
-        }
-        
-        return 0
-    }
-    
-    var bool:Bool
-    {
-        return self.lowercaseString == "true" ? true : false
-    }
-}
-
 class PeriodicElements
 {
     class var sharedPeriodicElements:PeriodicElements

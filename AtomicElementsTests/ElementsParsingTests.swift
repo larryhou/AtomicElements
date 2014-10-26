@@ -12,20 +12,28 @@ import XCTest
 
 class ElementsParsingTests: XCTestCase
 {
-    func testSingletonPerformance()
+    func testReadPerformance()
     {
         self.measureBlock()
         {
-            PeriodicElements.sharedPeriodicElements
-            return
+            var path = NSBundle.mainBundle().pathForResource("Elements", ofType: "plist")
+            var list = NSArray(contentsOfFile: path!)!
         }
     }
     
-    func testPlistReadPerformance()
+    func testParsingPerformance()
     {
+        var path = NSBundle.mainBundle().pathForResource("Elements", ofType: "plist")
+        var list = NSArray(contentsOfFile: path!)!
+        
         self.measureBlock()
         {
+            var elements:[AtomicElement] = []
             
+            for item:AnyObject in list
+            {
+                elements.append(AtomicElement(dict: item as NSDictionary))
+            }
         }
     }
 
