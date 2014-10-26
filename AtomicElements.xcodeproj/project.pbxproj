@@ -18,7 +18,6 @@
 		DBAD3C6619FCFF7B008DF72E /* NavgationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD3C6519FCFF7B008DF72E /* NavgationController.swift */; };
 		DBAD3C6819FD01FB008DF72E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAD3C6719FD01FB008DF72E /* TabBarController.swift */; };
 		DBF8D53D19FCAA9D00000A2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8D53C19FCAA9D00000A2C /* AppDelegate.swift */; };
-		DBF8D53F19FCAA9D00000A2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF8D53E19FCAA9D00000A2C /* ViewController.swift */; };
 		DBF8D54219FCAA9D00000A2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBF8D54019FCAA9D00000A2C /* Main.storyboard */; };
 		DBF8D54419FCAA9D00000A2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DBF8D54319FCAA9D00000A2C /* Images.xcassets */; };
 		DBF8D54719FCAA9D00000A2C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBF8D54519FCAA9D00000A2C /* LaunchScreen.xib */; };
@@ -49,7 +48,6 @@
 		DBF8D53719FCAA9D00000A2C /* AtomicElements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AtomicElements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBF8D53B19FCAA9D00000A2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBF8D53C19FCAA9D00000A2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DBF8D53E19FCAA9D00000A2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DBF8D54119FCAA9D00000A2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DBF8D54319FCAA9D00000A2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DBF8D54619FCAA9D00000A2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -95,7 +93,6 @@
 			isa = PBXGroup;
 			children = (
 				DBF8D53C19FCAA9D00000A2C /* AppDelegate.swift */,
-				DBF8D53E19FCAA9D00000A2C /* ViewController.swift */,
 				DBAD3C6519FCFF7B008DF72E /* NavgationController.swift */,
 				DBAD3C6719FD01FB008DF72E /* TabBarController.swift */,
 			);
@@ -284,7 +281,6 @@
 			files = (
 				DBAD3C6619FCFF7B008DF72E /* NavgationController.swift in Sources */,
 				DBAD3C6819FD01FB008DF72E /* TabBarController.swift in Sources */,
-				DBF8D53F19FCAA9D00000A2C /* ViewController.swift in Sources */,
 				DBF8D53D19FCAA9D00000A2C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

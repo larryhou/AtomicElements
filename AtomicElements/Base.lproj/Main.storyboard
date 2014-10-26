@@ -77,7 +77,13 @@
         <scene sceneID="dZT-yb-RbG">
             <objects>
                 <navigationController id="43z-y1-ksR" customClass="NavgationController" customModule="AtomicElements" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Name" image="1.png" id="kTi-qZ-7ml"/>
+                    <tabBarItem key="tabBarItem" title="Name" image="1.png" id="kTi-qZ-7ml">
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="imageOffset">
+                                <real key="value" value="4"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="EKg-tb-2f6">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -151,6 +157,6 @@
         <image name="4.png" width="80" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="r1q-Rs-IAV"/>
+        <segue reference="aGg-bz-sK2"/>
     </inferredMetricsTieBreakers>
 </document>
