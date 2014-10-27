@@ -34,17 +34,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AtomicTableViewCell" id="Bez-UI-F5P" customClass="AtomicTableViewCell" customModule="AtomicElements" customModuleProvider="target">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AtomicUsableCell" id="Bez-UI-F5P" customClass="AtomicTableViewCell" customModule="AtomicElements" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bez-UI-F5P" id="gPN-uj-qxq">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Atomic Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IE7-xU-D07">
-                                            <rect key="frame" x="67" y="12" width="312" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2lH-Mv-lve" customClass="AtomicIconView" customModule="AtomicElements" customModuleProvider="target">
                                             <rect key="frame" x="8" y="3" width="41" height="38"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -52,10 +46,17 @@
                                                 <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="Artificial_37.png"/>
                                             </userDefinedRuntimeAttributes>
                                         </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Atomic Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IE7-xU-D07">
+                                            <rect key="frame" x="57" y="11" width="312" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="tileView" destination="2lH-Mv-lve" id="0WO-1x-ESh"/>
+                                    <outlet property="icon" destination="2lH-Mv-lve" id="ala-At-5He"/>
+                                    <outlet property="label" destination="IE7-xU-D07" id="CPd-0k-Ba6"/>
                                     <segue destination="vpx-hA-zv8" kind="showDetail" id="sHF-3O-QEf"/>
                                 </connections>
                             </tableViewCell>
@@ -168,6 +169,6 @@
         <image name="Artificial_37.png" width="37" height="37"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aGg-bz-sK2"/>
+        <segue reference="r1q-Rs-IAV"/>
     </inferredMetricsTieBreakers>
 </document>

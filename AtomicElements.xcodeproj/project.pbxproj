@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6B2BD1D119FDF5E600D15E64 /* NumberTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2BD1D019FDF5E600D15E64 /* NumberTableViewDataSource.swift */; };
 		6B2BD1D519FDF94800D15E64 /* AtomicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2BD1D419FDF94800D15E64 /* AtomicTableViewCell.swift */; };
 		6B2BD1EC19FDFC2300D15E64 /* Artificial_24.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2BD1D719FDFC2300D15E64 /* Artificial_24.png */; };
 		6B2BD1ED19FDFC2300D15E64 /* Artificial_30.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2BD1D819FDFC2300D15E64 /* Artificial_30.png */; };
@@ -26,7 +25,6 @@
 		6B2BD1FD19FDFC2300D15E64 /* Solid_30.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2BD1E919FDFC2300D15E64 /* Solid_30.png */; };
 		6B2BD1FE19FDFC2300D15E64 /* Solid_37.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2BD1EA19FDFC2300D15E64 /* Solid_37.png */; };
 		6B2BD1FF19FDFC2300D15E64 /* Solid_256.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2BD1EB19FDFC2300D15E64 /* Solid_256.png */; };
-		6B2BD20119FE358400D15E64 /* AtomicIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B2BD20019FE358400D15E64 /* AtomicIconView.swift */; };
 		DBAD3C5B19FCF673008DF72E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5319FCF673008DF72E /* 1.png */; };
 		DBAD3C5C19FCF673008DF72E /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5419FCF673008DF72E /* 1@2x.png */; };
 		DBAD3C5D19FCF673008DF72E /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5519FCF673008DF72E /* 2.png */; };
@@ -61,7 +59,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6B2BD1D019FDF5E600D15E64 /* NumberTableViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberTableViewDataSource.swift; sourceTree = "<group>"; };
 		6B2BD1D419FDF94800D15E64 /* AtomicTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicTableViewCell.swift; sourceTree = "<group>"; };
 		6B2BD1D719FDFC2300D15E64 /* Artificial_24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Artificial_24.png; path = Images/Artificial_24.png; sourceTree = "<group>"; };
 		6B2BD1D819FDFC2300D15E64 /* Artificial_30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Artificial_30.png; path = Images/Artificial_30.png; sourceTree = "<group>"; };
@@ -80,7 +77,6 @@
 		6B2BD1E919FDFC2300D15E64 /* Solid_30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Solid_30.png; path = Images/Solid_30.png; sourceTree = "<group>"; };
 		6B2BD1EA19FDFC2300D15E64 /* Solid_37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Solid_37.png; path = Images/Solid_37.png; sourceTree = "<group>"; };
 		6B2BD1EB19FDFC2300D15E64 /* Solid_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Solid_256.png; path = Images/Solid_256.png; sourceTree = "<group>"; };
-		6B2BD20019FE358400D15E64 /* AtomicIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicIconView.swift; sourceTree = "<group>"; };
 		DBAD3C5319FCF673008DF72E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = Images/1.png; sourceTree = "<group>"; };
 		DBAD3C5419FCF673008DF72E /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1@2x.png"; path = "Images/1@2x.png"; sourceTree = "<group>"; };
 		DBAD3C5519FCF673008DF72E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = Images/2.png; sourceTree = "<group>"; };
@@ -124,20 +120,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6B2BD1D219FDF90C00D15E64 /* cell */ = {
-			isa = PBXGroup;
-			children = (
-				6B2BD1D419FDF94800D15E64 /* AtomicTableViewCell.swift */,
-				6B2BD20019FE358400D15E64 /* AtomicIconView.swift */,
-			);
-			name = cell;
-			sourceTree = "<group>";
-		};
 		6B2BD1D319FDF92500D15E64 /* data */ = {
 			isa = PBXGroup;
 			children = (
 				DBAD3C6F19FD13B6008DF72E /* AtomicDataSource.swift */,
-				6B2BD1D019FDF5E600D15E64 /* NumberTableViewDataSource.swift */,
 			);
 			name = data;
 			sourceTree = "<group>";
@@ -186,20 +172,11 @@
 			name = src;
 			sourceTree = "<group>";
 		};
-		DBAD3C6B19FD0970008DF72E /* IBUI */ = {
-			isa = PBXGroup;
-			children = (
-				DBF8D54519FCAA9D00000A2C /* LaunchScreen.xib */,
-				DBF8D54019FCAA9D00000A2C /* Main.storyboard */,
-			);
-			name = IBUI;
-			sourceTree = "<group>";
-		};
 		DBAD3C6E19FD137B008DF72E /* tableView */ = {
 			isa = PBXGroup;
 			children = (
 				6B2BD1D319FDF92500D15E64 /* data */,
-				6B2BD1D219FDF90C00D15E64 /* cell */,
+				6B2BD1D419FDF94800D15E64 /* AtomicTableViewCell.swift */,
 			);
 			name = tableView;
 			sourceTree = "<group>";
@@ -243,8 +220,9 @@
 			isa = PBXGroup;
 			children = (
 				DBAD3C6919FD0316008DF72E /* src */,
-				DBAD3C6B19FD0970008DF72E /* IBUI */,
 				DBAD3C1819FCEBD1008DF72E /* Images */,
+				DBF8D54519FCAA9D00000A2C /* LaunchScreen.xib */,
+				DBF8D54019FCAA9D00000A2C /* Main.storyboard */,
 				DBF8D54319FCAA9D00000A2C /* Images.xcassets */,
 				DBF8D53A19FCAA9D00000A2C /* Supporting Files */,
 			);
@@ -405,13 +383,11 @@
 			files = (
 				DBAD3C6619FCFF7B008DF72E /* NavgationController.swift in Sources */,
 				DBAD3C7319FD16D9008DF72E /* AtomicElement.swift in Sources */,
-				6B2BD1D119FDF5E600D15E64 /* NumberTableViewDataSource.swift in Sources */,
 				DBAD3C7019FD13B6008DF72E /* AtomicDataSource.swift in Sources */,
 				6B2BD1D519FDF94800D15E64 /* AtomicTableViewCell.swift in Sources */,
 				DBAD3C6819FD01FB008DF72E /* TabBarController.swift in Sources */,
 				DBF8D53D19FCAA9D00000A2C /* AppDelegate.swift in Sources */,
 				DBAD3C7519FD1761008DF72E /* PeriodicElements.swift in Sources */,
-				6B2BD20119FE358400D15E64 /* AtomicIconView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
