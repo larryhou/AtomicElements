@@ -11,7 +11,8 @@ import UIKit
 
 protocol AtomicDataSource:UITableViewDataSource
 {
-    var navigationTitle:String! { get }
+    var title:String! { get }
+    var tableViewStyle:UITableViewStyle { get }
     
     func atomicElementForIndexPath(indexPath:NSIndexPath)->AnyObject
 }
