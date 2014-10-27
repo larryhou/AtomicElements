@@ -221,12 +221,12 @@
 			isa = PBXGroup;
 			children = (
 				DBAD3C6919FD0316008DF72E /* src */,
-				DBAD3C1819FCEBD1008DF72E /* Images */,
+				DB6579EF19FEAD970080A8CF /* proj.playground */,
 				DBF8D54519FCAA9D00000A2C /* LaunchScreen.xib */,
 				DBF8D54019FCAA9D00000A2C /* Main.storyboard */,
 				DBF8D54319FCAA9D00000A2C /* Images.xcassets */,
+				DBAD3C1819FCEBD1008DF72E /* Images */,
 				DBF8D53A19FCAA9D00000A2C /* Supporting Files */,
-				DB6579EF19FEAD970080A8CF /* proj.playground */,
 			);
 			path = AtomicElements;
 			sourceTree = "<group>";
