@@ -49,5 +49,22 @@ class ElementsParsingTests: XCTestCase
         assert(element.atomicWeight == 0.0, "Default atomic weight should be 0.0")
         assert(element.name == "", "Default name should be empty")
     }
+    
+    
+    func testSortByNumberPerformance()
+    {
+        self.measureBlock()
+        {
+            let elements = PeriodicElements.sharedPeriodicElements.sortedByNumberElements
+        }
+    }
+    
+    func testSortBySymbolPerformance()
+    {
+        self.measureBlock()
+        {
+            let elements = PeriodicElements.sharedPeriodicElements.soredBySymbolElements
+        }
+    }
 
 }
