@@ -12,31 +12,31 @@ import UIKit
 extension Int
 {
     var string:String
-        {
-            return "\(self)"
+    {
+        return "\(self)"
     }
 }
 
 extension String
 {
     var double:Double
-        {
-            return NSString(string: self).doubleValue
+    {
+        return NSString(string: self).doubleValue
     }
     
     var int:Int
+    {
+        if let value = self.toInt()
         {
-            if let value = self.toInt()
-            {
-                return value
-            }
-            
-            return 0
+            return value
+        }
+        
+        return 0
     }
     
     var bool:Bool
-        {
-            return self.lowercaseString == "true" ? true : false
+    {
+        return self.lowercaseString == "true" ? true : false
     }
 }
 
@@ -79,4 +79,47 @@ class AtomicElement
         
         return ""
     }
+    
+    var stateImageForAtomicElementTileView:UIImage
+    {
+        return UIImage(named: String(format: "%@_37.png", self.state))!
+    }
+    
+    var stateImageForAtomicElementView:UIImage
+    {
+        return UIImage(named: String(format: "%@_256.png",self.state))!
+    }
+    
+    var stateImageForPeriodicTableView:UIImage
+    {
+        return UIImage(named: String(format:"%@_24.png", self.state))!
+    }
+    
+    var flipperImageForAtomicElementNavigationItem:UIImage
+    {
+        var size = CGSizeMake(30.0, 30.0)
+        UIGraphicsBeginImageContext(size)
+        
+        var backgroundImage = UIImage(named: String(format:"%@_30.png", self.state))
+        
+        var bounds = CGRectMake(0, 0, size.width, size.height)
+        backgroundImage!.drawInRect(bounds)
+        
+        UIColor.whiteColor().set()
+        
+        var fontAttr = [NSFontAttributeName:UIFont.boldSystemFontOfSize(8)]
+        var point = CGPointMake(2, 1)
+        NSString(string: atomicNumber.string).drawAtPoint(point, withAttributes: fontAttr)
+        
+        fontAttr = [NSFontAttributeName:UIFont.boldSystemFontOfSize(13)]
+        size = NSString(string: symbol).sizeWithAttributes(fontAttr)
+        point = CGPointMake((bounds.width - size.width)/2, 10)
+        NSString(string: symbol).drawAtPoint(point, withAttributes: fontAttr)
+        
+        var image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return image
+    }
+    
 }
