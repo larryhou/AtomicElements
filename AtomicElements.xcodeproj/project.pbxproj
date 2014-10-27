@@ -77,6 +77,7 @@
 		6B2BD1E919FDFC2300D15E64 /* Solid_30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Solid_30.png; path = Images/Solid_30.png; sourceTree = "<group>"; };
 		6B2BD1EA19FDFC2300D15E64 /* Solid_37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Solid_37.png; path = Images/Solid_37.png; sourceTree = "<group>"; };
 		6B2BD1EB19FDFC2300D15E64 /* Solid_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Solid_256.png; path = Images/Solid_256.png; sourceTree = "<group>"; };
+		DB6579EF19FEAD970080A8CF /* proj.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = proj.playground; sourceTree = "<group>"; };
 		DBAD3C5319FCF673008DF72E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = Images/1.png; sourceTree = "<group>"; };
 		DBAD3C5419FCF673008DF72E /* 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "1@2x.png"; path = "Images/1@2x.png"; sourceTree = "<group>"; };
 		DBAD3C5519FCF673008DF72E /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 2.png; path = Images/2.png; sourceTree = "<group>"; };
@@ -225,6 +226,7 @@
 				DBF8D54019FCAA9D00000A2C /* Main.storyboard */,
 				DBF8D54319FCAA9D00000A2C /* Images.xcassets */,
 				DBF8D53A19FCAA9D00000A2C /* Supporting Files */,
+				DB6579EF19FEAD970080A8CF /* proj.playground */,
 			);
 			path = AtomicElements;
 			sourceTree = "<group>";
