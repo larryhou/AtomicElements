@@ -53,6 +53,7 @@ class ElementsParsingTests: XCTestCase
     
     func testSortByNumberPerformance()
     {
+        PeriodicElements.sharedPeriodicElements
         self.measureBlock()
         {
             let elements = PeriodicElements.sharedPeriodicElements.sortedByNumberElements
@@ -61,6 +62,7 @@ class ElementsParsingTests: XCTestCase
     
     func testSortBySymbolPerformance()
     {
+        PeriodicElements.sharedPeriodicElements
         self.measureBlock()
         {
             let elements = PeriodicElements.sharedPeriodicElements.soredBySymbolElements
