@@ -102,8 +102,8 @@
 		DBAD3C6919FD0316008DF72E /* src */ = {
 			isa = PBXGroup;
 			children = (
-				DBAD3C7119FD1684008DF72E /* data */,
-				DBAD3C6E19FD137B008DF72E /* tableViewDataSource */,
+				DBAD3C7119FD1684008DF72E /* Data Model */,
+				DBAD3C6E19FD137B008DF72E /* TableView DataSource */,
 				DBF8D53C19FCAA9D00000A2C /* AppDelegate.swift */,
 				DBAD3C6519FCFF7B008DF72E /* NavgationController.swift */,
 				DBAD3C6719FD01FB008DF72E /* TabBarController.swift */,
@@ -129,21 +129,21 @@
 			name = storyboard;
 			sourceTree = "<group>";
 		};
-		DBAD3C6E19FD137B008DF72E /* tableViewDataSource */ = {
+		DBAD3C6E19FD137B008DF72E /* TableView DataSource */ = {
 			isa = PBXGroup;
 			children = (
 				DBAD3C6F19FD13B6008DF72E /* AtomicDataSource.swift */,
 			);
-			name = tableViewDataSource;
+			name = "TableView DataSource";
 			sourceTree = "<group>";
 		};
-		DBAD3C7119FD1684008DF72E /* data */ = {
+		DBAD3C7119FD1684008DF72E /* Data Model */ = {
 			isa = PBXGroup;
 			children = (
 				DBAD3C7219FD16D9008DF72E /* AtomicElement.swift */,
 				DBAD3C7419FD1761008DF72E /* PeriodicElements.swift */,
 			);
-			name = data;
+			name = "Data Model";
 			sourceTree = "<group>";
 		};
 		DBAD3C7A19FD3AF7008DF72E /* src */ = {
