@@ -9,14 +9,10 @@
 import Foundation
 import UIKit
 
-@IBDesignable
 class AtomicTableViewCell:UITableViewCell
 {
-    @IBOutlet
-    var icon:AtomicIconView!
-    
-    @IBOutlet
-    var label:UILabel!
+    @IBOutlet weak var icon:AtomicIconView!
+    @IBOutlet weak var label:UILabel!
     
     var element:AtomicElement!
     {
@@ -30,15 +26,15 @@ class AtomicTableViewCell:UITableViewCell
         }
     }
     
-    override init(style: UITableViewCellStyle, reuseIdentifier: String?)
-    {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
-    }
-
-    required init(coder aDecoder: NSCoder)
-    {
-        super.init(coder: aDecoder)
-    }
+//    override init(style: UITableViewCellStyle, reuseIdentifier: String?)
+//    {
+//        super.init(style: style, reuseIdentifier: reuseIdentifier)
+//    }
+//
+//    required init(coder aDecoder: NSCoder)
+//    {
+//        super.init(coder: aDecoder)
+//    }
 }
 
 

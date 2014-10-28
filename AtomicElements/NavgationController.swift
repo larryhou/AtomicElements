@@ -13,7 +13,5 @@ class NavgationController: UINavigationController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        println(self.topViewController)
     }
 }

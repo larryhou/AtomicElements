@@ -15,17 +15,29 @@ class TabBarController:UITabBarController
     {
         super.viewDidLoad()
         
+        PeriodicElements.sharedPeriodicElements
+        
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
         for rootController in self.viewControllers! as [UINavigationController]
         {
             rootController.tabBarItem.imageInsets = UIEdgeInsetsMake(8, 0, -8, 0)
             rootController.tabBarItem.setTitlePositionAdjustment(UIOffsetMake(0, -4))
+            
             if rootController.topViewController == nil
             {
-                rootController.viewControllers = [storyboard.instantiateViewControllerWithIdentifier("AtomicTableView")]
+                var tableViewController = storyboard.instantiateViewControllerWithIdentifier("AtomicTableView") as ElementsTableViewController
+                switch rootController.tabBarItem.title!
+                {
+                    case "Number":
+                        tableViewController.dataSource = NumberAtomicDataSource()
+                        break
+                    
+                    default:
+                        break
+                }
+                
+                rootController.viewControllers = [tableViewController]
             }
         }
-        
-        PeriodicElements.sharedPeriodicElements
     }
 }

@@ -28,7 +28,7 @@
         <!--Root View Controller-->
         <scene sceneID="0dO-QE-lH7">
             <objects>
-                <tableViewController storyboardIdentifier="AtomicTableView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yh6-zF-sqF" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="AtomicTableView" useStoryboardIdentifierAsRestorationIdentifier="YES" id="yh6-zF-sqF" customClass="ElementsTableViewController" customModule="AtomicElements" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="5zQ-Xs-g4h">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,14 +39,14 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Bez-UI-F5P" id="gPN-uj-qxq">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2lH-Mv-lve" customClass="AtomicIconView" customModule="AtomicElements" customModuleProvider="target">
+                                        <view tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2lH-Mv-lve" customClass="AtomicIconView" customModule="AtomicElements" customModuleProvider="target">
                                             <rect key="frame" x="8" y="3" width="41" height="38"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="Artificial_37.png"/>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Atomic Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IE7-xU-D07">
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Atomic Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IE7-xU-D07">
                                             <rect key="frame" x="57" y="11" width="312" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -55,7 +55,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="icon" destination="2lH-Mv-lve" id="ala-At-5He"/>
+                                    <outlet property="icon" destination="2lH-Mv-lve" id="Ahz-k0-Uel"/>
                                     <outlet property="label" destination="IE7-xU-D07" id="CPd-0k-Ba6"/>
                                     <segue destination="vpx-hA-zv8" kind="showDetail" id="sHF-3O-QEf"/>
                                 </connections>
