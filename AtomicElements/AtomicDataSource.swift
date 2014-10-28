@@ -11,8 +11,10 @@ import UIKit
 
 protocol AtomicDataSource:UITableViewDataSource
 {
-    var title:String! { get }
+    var title:String { get }
     var tableViewStyle:UITableViewStyle { get }
     
     func atomicElementForIndexPath(indexPath:NSIndexPath)->AtomicElement
 }
+
+let ATOMIC_REUSABLE_CELL = "AtomicReusableCell"
