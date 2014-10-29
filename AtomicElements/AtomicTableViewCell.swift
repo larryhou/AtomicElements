@@ -21,20 +21,11 @@ class AtomicTableViewCell:UITableViewCell
             icon.backgroundImage = element.stateImageForAtomicElementTileView
             icon.atomicNumber = element.atomicNumber
             icon.symbol = element.symbol
+            icon.setNeedsDisplay()
             
             label.text = element.name
         }
     }
-    
-//    override init(style: UITableViewCellStyle, reuseIdentifier: String?)
-//    {
-//        super.init(style: style, reuseIdentifier: reuseIdentifier)
-//    }
-//
-//    required init(coder aDecoder: NSCoder)
-//    {
-//        super.init(coder: aDecoder)
-//    }
 }
 
 

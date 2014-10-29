@@ -18,6 +18,11 @@ class ElementsTableViewController:UITableViewController
         super.viewDidLoad()
         
         tableView.delegate = self
-//        tableView.dataSource = dataSource
+        tableView.dataSource = dataSource
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        return 44
     }
 }

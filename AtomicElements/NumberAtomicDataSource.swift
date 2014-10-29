@@ -42,11 +42,6 @@ class NumberAtomicDataSource:NSObject, AtomicDataSource
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
         var cell = tableView.dequeueReusableCellWithIdentifier(ATOMIC_REUSABLE_CELL) as AtomicTableViewCell!
-        if cell == nil
-        {
-            cell = AtomicTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: ATOMIC_REUSABLE_CELL)
-        }
-        
         cell.element = atomicElementForIndexPath(indexPath)
         return cell
     }
