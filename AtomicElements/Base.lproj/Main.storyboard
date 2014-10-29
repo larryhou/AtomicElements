@@ -57,7 +57,7 @@
                                 <connections>
                                     <outlet property="icon" destination="2lH-Mv-lve" id="Ahz-k0-Uel"/>
                                     <outlet property="label" destination="IE7-xU-D07" id="CPd-0k-Ba6"/>
-                                    <segue destination="vpx-hA-zv8" kind="show" id="sHF-3O-QEf"/>
+                                    <segue destination="vpx-hA-zv8" kind="show" identifier="ElementDetailSegue" id="sHF-3O-QEf"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -72,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="2187" y="337"/>
         </scene>
-        <!--View Controller-->
+        <!--Atomic Element View Controller-->
         <scene sceneID="X0k-iz-vgb">
             <objects>
-                <viewController id="vpx-hA-zv8" sceneMemberID="viewController">
+                <viewController id="vpx-hA-zv8" customClass="AtomicElementViewController" customModule="AtomicElements" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ftp-MU-lvW"/>
                         <viewControllerLayoutGuide type="bottom" id="ckL-Sq-Hx8"/>

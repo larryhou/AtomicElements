@@ -27,8 +27,21 @@ class ElementsTableViewController:UITableViewController
         tableView.dataSource = dataSource
     }
     
+    //MARK: assign a fixed height for custom cell
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
         return 44
+    }
+    
+    //MARK: pass AtomicElement object to destination controller
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "ElementDetailSegue"
+        {
+            var indexPath:NSIndexPath = tableView.indexPathForSelectedRow()!
+            
+            var viewController = segue.destinationViewController as AtomicElementViewController
+            viewController.element = dataSource.atomicElementForIndexPath(indexPath)
+        }
     }
 }
