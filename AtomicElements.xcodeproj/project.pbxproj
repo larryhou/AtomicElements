@@ -27,6 +27,7 @@
 		6B2BD1FF19FDFC2300D15E64 /* Solid_256.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2BD1EB19FDFC2300D15E64 /* Solid_256.png */; };
 		6BDE21C519FF6504005B880E /* NumberAtomicDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE21C419FF6504005B880E /* NumberAtomicDataSource.swift */; };
 		6BDE21F81A00B97F005B880E /* AtomicElementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE21F71A00B97F005B880E /* AtomicElementViewController.swift */; };
+		6BDE21FA1A00BC3D005B880E /* AtomicElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE21F91A00BC3D005B880E /* AtomicElementView.swift */; };
 		DB9D30A419FFF6C20036024B /* ElementsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB9D30A319FFF6C20036024B /* ElementsTableViewController.swift */; };
 		DBAD3C5B19FCF673008DF72E /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5319FCF673008DF72E /* 1.png */; };
 		DBAD3C5C19FCF673008DF72E /* 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DBAD3C5419FCF673008DF72E /* 1@2x.png */; };
@@ -82,6 +83,7 @@
 		6B2BD1EB19FDFC2300D15E64 /* Solid_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Solid_256.png; path = Images/Solid_256.png; sourceTree = "<group>"; };
 		6BDE21C419FF6504005B880E /* NumberAtomicDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberAtomicDataSource.swift; sourceTree = "<group>"; };
 		6BDE21F71A00B97F005B880E /* AtomicElementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicElementViewController.swift; sourceTree = "<group>"; };
+		6BDE21F91A00BC3D005B880E /* AtomicElementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicElementView.swift; sourceTree = "<group>"; };
 		DB6579EF19FEAD970080A8CF /* proj.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = proj.playground; sourceTree = "<group>"; };
 		DB9D30A319FFF6C20036024B /* ElementsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementsTableViewController.swift; sourceTree = "<group>"; };
 		DBAD3C5319FCF673008DF72E /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1.png; path = Images/1.png; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				6BDE21F71A00B97F005B880E /* AtomicElementViewController.swift */,
+				6BDE21F91A00BC3D005B880E /* AtomicElementView.swift */,
 			);
 			name = detailView;
 			sourceTree = "<group>";
@@ -410,6 +413,7 @@
 				DBAD3C6819FD01FB008DF72E /* TabBarController.swift in Sources */,
 				DBF8D53D19FCAA9D00000A2C /* AppDelegate.swift in Sources */,
 				DBAD3C7519FD1761008DF72E /* PeriodicElements.swift in Sources */,
+				6BDE21FA1A00BC3D005B880E /* AtomicElementView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
