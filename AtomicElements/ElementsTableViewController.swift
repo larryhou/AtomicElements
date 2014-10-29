@@ -12,6 +12,12 @@ import UIKit
 class ElementsTableViewController:UITableViewController
 {
     var dataSource:AtomicDataSource!
+    {
+        didSet
+        {
+            navigationItem.title = dataSource.title
+        }
+    }
     
     override func viewDidLoad()
     {

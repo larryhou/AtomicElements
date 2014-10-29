@@ -20,7 +20,7 @@ class NumberAtomicDataSource:NSObject, AtomicDataSource
     }
     
     //MARK: AtomicDataSource protocol
-    var title:String { return "Number Sorted" }
+    var title:String { return "Number-sorted Elements" }
     var tableViewStyle:UITableViewStyle { return UITableViewStyle.Plain; }
     
     func atomicElementForIndexPath(indexPath: NSIndexPath) -> AtomicElement
