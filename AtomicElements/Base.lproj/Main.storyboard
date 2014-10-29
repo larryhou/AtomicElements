@@ -83,8 +83,20 @@
                     <view key="view" contentMode="scaleToFill" id="h5V-XM-ZJs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qfg-g8-U6M" customClass="AtomicElementView" customModule="AtomicElements" customModuleProvider="target">
+                                <rect key="frame" x="172" y="167" width="256" height="256"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="Artificial_256.png"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="elementView" destination="qfg-g8-U6M" id="9w2-tk-TcD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHt-Rz-9Cd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,6 +178,7 @@
         <image name="2.png" width="80" height="48"/>
         <image name="3.png" width="80" height="48"/>
         <image name="4.png" width="80" height="48"/>
+        <image name="Artificial_256.png" width="256" height="256"/>
         <image name="Artificial_37.png" width="37" height="37"/>
     </resources>
     <inferredMetricsTieBreakers>

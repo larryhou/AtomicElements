@@ -13,6 +13,8 @@ class AtomicElementViewController:UIViewController
 {
     var element:AtomicElement!
     
+    @IBOutlet weak var elementView: AtomicElementView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
