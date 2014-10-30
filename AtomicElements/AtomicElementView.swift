@@ -46,7 +46,8 @@ class AtomicElementView:UIView
         NSString(string: symbol).drawAtPoint(point, withAttributes: fontAttr)
     }
     
-    private func createGradientMask(pixelsWidth:UInt, pixelsHeight:UInt)->CGImageRef?
+    //MARK: 创建渐变遮罩
+    private func createGradientMask(pixelsWidth:UInt, _ pixelsHeight:UInt)->CGImage?
     {
         var colorSpace = CGColorSpaceCreateDeviceGray()
         
@@ -67,5 +68,43 @@ class AtomicElementView:UIView
         }
         
         return nil
+    }
+    
+    //MARK: 创建指定高度的倒影
+    func getReflectionWithHeight(height:UInt)->UIImage?
+    {
+        var colorSpace = CGColorSpaceCreateDeviceGray()
+        var reflectionContext = CGBitmapContextCreate(nil, UInt(bounds.width), height, 8, 0, colorSpace, CGBitmapInfo(CGImageAlphaInfo.None.rawValue))
+        
+        if reflectionContext != nil
+        {
+            var translateY = bounds.height - CGFloat(height)
+            CGContextTranslateCTM(reflectionContext, 0, -translateY)
+            
+            layer.drawInContext(reflectionContext)
+            
+            CGContextTranslateCTM(reflectionContext, 0, translateY)
+            
+            var reflactionImage = CGBitmapContextCreateImage(reflectionContext)
+            
+            var gradientMask = createGradientMask(1, 1)
+            CGImageCreateWithMask(reflactionImage, gradientMask)
+            
+            return UIImage(CGImage: reflactionImage)
+        }
+        
+        return nil
+    }
+}
+
+@IBDesignable
+class ImageReflectionView:UIView
+{
+    @IBInspectable
+    var image:UIImage!
+    
+    override func drawRect(rect: CGRect)
+    {
+        
     }
 }

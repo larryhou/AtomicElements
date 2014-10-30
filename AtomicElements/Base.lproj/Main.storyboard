@@ -84,18 +84,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qfg-g8-U6M" customClass="AtomicElementView" customModule="AtomicElements" customModuleProvider="target">
-                                <rect key="frame" x="172" y="167" width="256" height="256"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfg-g8-U6M" customClass="AtomicElementView" customModule="AtomicElements" customModuleProvider="target">
+                                <rect key="frame" x="172" y="124" width="256" height="256"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="fa8-lV-JIa"/>
+                                    <constraint firstAttribute="height" constant="256" id="zaF-my-nmx"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="Artificial_256.png"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zeq-T9-Fd9">
+                                <rect key="frame" x="172" y="380" width="256" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="256" id="noI-fS-4fy"/>
+                                    <constraint firstAttribute="height" constant="96" id="rue-BS-ot1"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="qfg-g8-U6M" secondAttribute="centerY" constant="48" id="HeC-2j-wiD"/>
+                            <constraint firstAttribute="centerX" secondItem="qfg-g8-U6M" secondAttribute="centerX" id="LFw-3r-VT0"/>
+                            <constraint firstItem="zeq-T9-Fd9" firstAttribute="top" secondItem="qfg-g8-U6M" secondAttribute="bottom" id="O8d-ni-1GT"/>
+                            <constraint firstAttribute="centerX" secondItem="zeq-T9-Fd9" secondAttribute="centerX" id="mNc-0w-U2T"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="elementView" destination="qfg-g8-U6M" id="9w2-tk-TcD"/>
+                        <outlet property="atomicView" destination="qfg-g8-U6M" id="5xA-o2-nuV"/>
+                        <outlet property="reflactionView" destination="zeq-T9-Fd9" id="ilJ-Ba-U2L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eHt-Rz-9Cd" userLabel="First Responder" sceneMemberID="firstResponder"/>
