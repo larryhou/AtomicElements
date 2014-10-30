@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+protocol AtomicElementViewDelegate
+{
+    func atomicElementViewTapped()
+}
+
 @IBDesignable
 class AtomicElementView:UIView
 {
@@ -23,6 +28,37 @@ class AtomicElementView:UIView
     
     @IBInspectable
     var name:String = "Silver"
+    
+    var delegate:AtomicElementViewDelegate!
+    
+    override init(frame: CGRect)
+    {
+        super.init(frame: frame)
+        
+        backgroundColor = UIColor.clearColor()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: "didTap")
+        addGestureRecognizer(tapGesture)
+    }
+
+    required init(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+    }
+    
+    func didTap(sender:UIGestureRecognizer)
+    {
+        println(sender)
+        if delegate != nil
+        {
+            delegate.atomicElementViewTapped()
+        }
+    }
+    
+    override func becomeFirstResponder() -> Bool
+    {
+        return true
+    }
     
     override func drawRect(rect: CGRect)
     {
@@ -67,6 +103,17 @@ class ImageReflectionView:UIView
     @IBInspectable
     var image:UIImage!
     
+    override init(frame: CGRect)
+    {
+        super.init(frame: frame)
+        backgroundColor = UIColor.clearColor()
+    }
+
+    required init(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+    }
+    
     override func drawRect(rect: CGRect)
     {
         var offsetY = image.size.height - bounds.height
@@ -88,7 +135,7 @@ class ImageReflectionView:UIView
         if gradientContext != nil
         {
             var colors:[CGFloat] = [1.0, 1.0,
-                0.0, 1.0]
+                                    0.0, 1.0]
             var grayGradient = CGGradientCreateWithColorComponents(colorSpace, colors, nil, 2)
             
             var startPoint = CGPointZero

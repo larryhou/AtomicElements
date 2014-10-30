@@ -86,7 +86,8 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfg-g8-U6M" customClass="AtomicElementView" customModule="AtomicElements" customModuleProvider="target">
                                 <rect key="frame" x="172" y="132" width="256" height="256"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="fa8-lV-JIa"/>
                                     <constraint firstAttribute="height" constant="256" id="zaF-my-nmx"/>
@@ -97,7 +98,7 @@
                             </view>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzO-Pz-kTc" customClass="ImageReflectionView" customModule="AtomicElements" customModuleProvider="target">
                                 <rect key="frame" x="172" y="388" width="256" height="90"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="ZO1-y2-w3X"/>
                                     <constraint firstAttribute="height" constant="90" id="rmF-5h-VCa"/>
@@ -108,6 +109,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="BzO-Pz-kTc" firstAttribute="top" secondItem="qfg-g8-U6M" secondAttribute="bottom" id="BKm-Th-2S5"/>
                             <constraint firstAttribute="centerY" secondItem="qfg-g8-U6M" secondAttribute="centerY" constant="40" id="HeC-2j-wiD"/>
