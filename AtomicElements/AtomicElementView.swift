@@ -46,54 +46,18 @@ class AtomicElementView:UIView
         NSString(string: symbol).drawAtPoint(point, withAttributes: fontAttr)
     }
     
-    //MARK: 创建渐变遮罩
-    private func createGradientMask(pixelsWidth:UInt, _ pixelsHeight:UInt)->CGImage?
+    //MARK: 获取截图
+    func getContextImage()->UIImage
     {
-        var colorSpace = CGColorSpaceCreateDeviceGray()
+        var colorSpace = CGColorSpaceCreateDeviceRGB()
+        var context = CGBitmapContextCreate(nil, UInt(bounds.width), UInt(bounds.height), 8, 0, colorSpace, CGBitmapInfo(CGImageAlphaInfo.PremultipliedLast.rawValue))
         
-        var gradientContext = CGBitmapContextCreate(nil, pixelsWidth, pixelsHeight, 8, 0, colorSpace, CGBitmapInfo(CGImageAlphaInfo.None.rawValue))
+        var flipVertical = CGAffineTransformMake(1, 0, 0, -1, 0, bounds.height)
+        CGContextConcatCTM(context, flipVertical)
         
-        if gradientContext != nil
-        {
-            var colors:[CGFloat] = [0.0, 1.0,
-                                    1.0, 1.0]
-            var grayGradient = CGGradientCreateWithColorComponents(colorSpace, colors, nil, 2)
-            
-            var startPoint = CGPointZero
-            var endPoint = CGPointMake(0, CGFloat(pixelsHeight))
-            
-            CGContextDrawLinearGradient(gradientContext, grayGradient, startPoint, endPoint, CGGradientDrawingOptions(kCGGradientDrawsAfterEndLocation))
-            
-            return CGBitmapContextCreateImage(gradientContext)
-        }
-        
-        return nil
-    }
-    
-    //MARK: 创建指定高度的倒影
-    func getReflectionWithHeight(height:UInt)->UIImage?
-    {
-        var colorSpace = CGColorSpaceCreateDeviceGray()
-        var reflectionContext = CGBitmapContextCreate(nil, UInt(bounds.width), height, 8, 0, colorSpace, CGBitmapInfo(CGImageAlphaInfo.None.rawValue))
-        
-        if reflectionContext != nil
-        {
-            var translateY = bounds.height - CGFloat(height)
-            CGContextTranslateCTM(reflectionContext, 0, -translateY)
-            
-            layer.drawInContext(reflectionContext)
-            
-            CGContextTranslateCTM(reflectionContext, 0, translateY)
-            
-            var reflactionImage = CGBitmapContextCreateImage(reflectionContext)
-            
-            var gradientMask = createGradientMask(1, 1)
-            CGImageCreateWithMask(reflactionImage, gradientMask)
-            
-            return UIImage(CGImage: reflactionImage)
-        }
-        
-        return nil
+        layer.drawInContext(context)
+        var bitmapData = CGBitmapContextCreateImage(context)
+        return UIImage(CGImage: bitmapData, scale: 1, orientation: UIImageOrientation.DownMirrored)!
     }
 }
 
@@ -105,6 +69,36 @@ class ImageReflectionView:UIView
     
     override func drawRect(rect: CGRect)
     {
+        var offsetY = image.size.height - bounds.height
+        var bitmapData = CGImageCreateWithImageInRect(image.CGImage, CGRectMake(0, offsetY, image.size.width, bounds.height))
+        bitmapData = CGImageCreateWithMask(bitmapData, createGradientMask(1, UInt(bounds.height)))
         
+        var result = UIImage(CGImage: bitmapData, scale: image.scale, orientation: UIImageOrientation.DownMirrored)!
+        
+        result.drawInRect(CGRectMake(0, 0, bounds.width, bounds.height))
+    }
+    
+    //MARK: 创建渐变遮罩
+    private func createGradientMask(pixelsWidth:UInt, _ pixelsHeight:UInt)->CGImage?
+    {
+        var colorSpace = CGColorSpaceCreateDeviceGray()
+        
+        var gradientContext = CGBitmapContextCreate(nil, pixelsWidth, pixelsHeight, 8, 0, colorSpace, CGBitmapInfo(CGImageAlphaInfo.None.rawValue))
+        
+        if gradientContext != nil
+        {
+            var colors:[CGFloat] = [1.0, 1.0,
+                0.0, 1.0]
+            var grayGradient = CGGradientCreateWithColorComponents(colorSpace, colors, nil, 2)
+            
+            var startPoint = CGPointZero
+            var endPoint = CGPointMake(0, CGFloat(pixelsHeight))
+            
+            CGContextDrawLinearGradient(gradientContext, grayGradient, startPoint, endPoint, CGGradientDrawingOptions(kCGGradientDrawsAfterEndLocation))
+            
+            return CGBitmapContextCreateImage(gradientContext)
+        }
+        
+        return nil
     }
 }
