@@ -85,8 +85,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfg-g8-U6M" customClass="AtomicElementView" customModule="AtomicElements" customModuleProvider="target">
-                                <rect key="frame" x="172" y="124" width="256" height="256"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="172" y="132" width="256" height="256"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="fa8-lV-JIa"/>
                                     <constraint firstAttribute="height" constant="256" id="zaF-my-nmx"/>
@@ -95,22 +95,22 @@
                                     <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="Artificial_256.png"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzO-Pz-kTc" customClass="ImageReflectionView" customModule="AtomicElements" customModuleProvider="target">
-                                <rect key="frame" x="172" y="380" width="256" height="120"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzO-Pz-kTc" customClass="ImageReflectionView" customModule="AtomicElements" customModuleProvider="target">
+                                <rect key="frame" x="172" y="388" width="256" height="90"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="ZO1-y2-w3X"/>
-                                    <constraint firstAttribute="height" constant="120" id="rmF-5h-VCa"/>
+                                    <constraint firstAttribute="height" constant="90" id="rmF-5h-VCa"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="Artificial_256.png"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="BzO-Pz-kTc" firstAttribute="top" secondItem="qfg-g8-U6M" secondAttribute="bottom" id="BKm-Th-2S5"/>
-                            <constraint firstAttribute="centerY" secondItem="qfg-g8-U6M" secondAttribute="centerY" constant="48" id="HeC-2j-wiD"/>
+                            <constraint firstAttribute="centerY" secondItem="qfg-g8-U6M" secondAttribute="centerY" constant="40" id="HeC-2j-wiD"/>
                             <constraint firstAttribute="centerX" secondItem="qfg-g8-U6M" secondAttribute="centerX" id="LFw-3r-VT0"/>
                             <constraint firstAttribute="centerX" secondItem="BzO-Pz-kTc" secondAttribute="centerX" id="rs6-Zb-7vV"/>
                         </constraints>

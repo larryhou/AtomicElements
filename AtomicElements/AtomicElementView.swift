@@ -31,13 +31,13 @@ class AtomicElementView:UIView
         
         UIColor.whiteColor().set()
         
-        var fontAttr = NSDictionary(objectsAndKeys: UIFont.boldSystemFontOfSize(36), NSFontAttributeName)
+        var fontAttr = NSDictionary(objectsAndKeys: UIFont.boldSystemFontOfSize(48), NSFontAttributeName)
         var point = CGPointMake(10, 0)
         NSString(string: "\(atomicNumber)").drawAtPoint(point, withAttributes: fontAttr)
         
-        fontAttr = NSDictionary(objectsAndKeys:UIFont.boldSystemFontOfSize(48), NSFontAttributeName)
+        fontAttr = NSDictionary(objectsAndKeys:UIFont.boldSystemFontOfSize(36), NSFontAttributeName)
         var size = NSString(string: name).sizeWithAttributes(fontAttr)
-        point = CGPointMake((bounds.width - size.width) / 2, bounds.height / 2 - size.height)
+        point = CGPointMake((bounds.width - size.width) / 2, bounds.height / 2 - size.height - 10)
         NSString(string: name).drawAtPoint(point, withAttributes: fontAttr)
         
         fontAttr = NSDictionary(objectsAndKeys: UIFont.boldSystemFontOfSize(96), NSFontAttributeName)
