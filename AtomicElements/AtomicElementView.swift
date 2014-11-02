@@ -34,28 +34,32 @@ class AtomicElementView:UIView
     override init(frame: CGRect)
     {
         super.init(frame: frame)
-        
-        backgroundColor = UIColor.clearColor()
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: "didTap")
-        addGestureRecognizer(tapGesture)
+        setup()
     }
 
     required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
+        setup()
     }
     
-    func didTap(sender:UIGestureRecognizer)
+    private func setup()
     {
-        println(sender)
+        backgroundColor = UIColor.clearColor()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: "didTap:")
+        addGestureRecognizer(tapGesture)
+    }
+    
+    func didTap(sender:UITapGestureRecognizer)
+    {
         if delegate != nil
         {
             delegate.atomicElementViewTapped()
         }
     }
     
-    override func becomeFirstResponder() -> Bool
+    override func canBecomeFirstResponder() -> Bool
     {
         return true
     }
@@ -106,12 +110,18 @@ class ImageReflectionView:UIView
     override init(frame: CGRect)
     {
         super.init(frame: frame)
-        backgroundColor = UIColor.clearColor()
+        setup()
     }
 
     required init(coder aDecoder: NSCoder)
     {
         super.init(coder: aDecoder)
+        setup()
+    }
+    
+    private func setup()
+    {
+        backgroundColor = UIColor.clearColor()
     }
     
     override func drawRect(rect: CGRect)
