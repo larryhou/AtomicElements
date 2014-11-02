@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class AtomicElementViewController:UIViewController
+class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
 {
     let REFLACTION_HEIGHT_RATIO:CGFloat = 0.3
     
@@ -22,6 +22,7 @@ class AtomicElementViewController:UIViewController
     {
         super.viewDidLoad()
         
+        atomicView.delegate = self
         atomicView.backgroundImage = element.stateImageForAtomicElementView
         atomicView.atomicNumber = element.atomicNumber
         atomicView.symbol = element.symbol
@@ -29,5 +30,10 @@ class AtomicElementViewController:UIViewController
         atomicView.setNeedsDisplay()
         
         reflactionView.image = atomicView.getContextImage()
+    }
+    
+    func didTap(target: AtomicElementView, sender: UITapGestureRecognizer)
+    {
+        println("flip view", sender)
     }
 }

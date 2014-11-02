@@ -11,7 +11,7 @@ import UIKit
 
 protocol AtomicElementViewDelegate
 {
-    func atomicElementViewTapped()
+    func didTap(target:AtomicElementView, sender:UITapGestureRecognizer)
 }
 
 @IBDesignable
@@ -29,7 +29,7 @@ class AtomicElementView:UIView
     @IBInspectable
     var name:String = "Silver"
     
-    var delegate:AtomicElementViewDelegate!
+    var delegate:AtomicElementViewDelegate?
     
     override init(frame: CGRect)
     {
@@ -53,10 +53,7 @@ class AtomicElementView:UIView
     
     func didTap(sender:UITapGestureRecognizer)
     {
-        if delegate != nil
-        {
-            delegate.atomicElementViewTapped()
-        }
+        delegate?.didTap(self, sender: sender)
     }
     
     override func canBecomeFirstResponder() -> Bool
