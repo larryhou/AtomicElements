@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-protocol AtomicElementViewDelegate
+@objc protocol AtomicElementViewDelegate
 {
     func didTap(target:AtomicElementView, sender:UITapGestureRecognizer)
 }
@@ -29,7 +29,7 @@ class AtomicElementView:UIView
     @IBInspectable
     var name:String = "Silver"
     
-    var delegate:AtomicElementViewDelegate?
+    weak var delegate:AtomicElementViewDelegate?
     
     override init(frame: CGRect)
     {
@@ -95,6 +95,84 @@ class AtomicElementView:UIView
         layer.drawInContext(context)
         var bitmapData = CGBitmapContextCreateImage(context)
         return UIImage(CGImage: bitmapData, scale: 1, orientation: UIImageOrientation.DownMirrored)!
+    }
+}
+
+@IBDesignable
+class FlippedAtomicElementView:AtomicElementView
+{
+    @IBInspectable
+    var atomicWeight:Double = 108
+    
+    @IBInspectable
+    var state:String = "Gas"
+    
+    @IBInspectable
+    var period:Double = 6
+    
+    @IBInspectable
+    var group:Int = 5
+    
+    @IBInspectable
+    var discoverYear:String = "1922"
+    
+    @IBAction func jumpToWikipedia(sender: UIButton)
+    {
+        var url = NSURL(string: "http://en.wikipedia.org/wiki/\(name)")!
+        if !UIApplication.sharedApplication().openURL(url)
+        {
+            UIAlertView(title: "ERROR", message: "Error occurs on opening \(url.description)", delegate: nil, cancelButtonTitle: "").show()
+        }
+    }
+    
+    override func drawRect(rect: CGRect)
+    {
+        var bounds = CGRectMake(0, 0, backgroundImage.size.width, backgroundImage.size.height)
+        backgroundImage.drawInRect(bounds)
+        
+        UIColor.whiteColor().set()
+        
+        var point:CGPoint, size:CGSize
+        var fontAttr:NSDictionary, text:NSString
+        
+        fontAttr = NSDictionary(objectsAndKeys: UIFont.boldSystemFontOfSize(32), NSFontAttributeName)
+        point = CGPointMake(10, 5)
+        NSString(string: "\(atomicNumber)").drawAtPoint(point, withAttributes: fontAttr)
+        
+        size = NSString(string: symbol).sizeWithAttributes(fontAttr)
+        point = CGPointMake(bounds.width - size.width - 10, 5)
+        NSString(string: symbol).drawAtPoint(point, withAttributes: fontAttr)
+        
+        fontAttr = NSDictionary(objectsAndKeys: UIFont.boldSystemFontOfSize(36), NSFontAttributeName)
+        size = NSString(string: name).sizeWithAttributes(fontAttr)
+        point = CGPointMake((bounds.width - size.width) / 2, 50)
+        NSString(string: name).drawAtPoint(point, withAttributes: fontAttr)
+        
+        text = NSString(string: String(format:"Atomic Weight: %3.0f", atomicWeight))
+        fontAttr = NSDictionary(objectsAndKeys: UIFont.boldSystemFontOfSize(14), NSFontAttributeName)
+        size = text.sizeWithAttributes(fontAttr)
+        point = CGPointMake((bounds.width - size.width) / 2, 95)
+        text.drawAtPoint(point, withAttributes: fontAttr)
+        
+        text = NSString(string: String(format:"State: %@", state))
+        size = text.sizeWithAttributes(fontAttr)
+        point = CGPointMake((bounds.width - size.width) / 2, point.y + 20)
+        text.drawAtPoint(point, withAttributes: fontAttr)
+        
+        text = NSString(string: String(format:"Period:%2.0f", period))
+        size = text.sizeWithAttributes(fontAttr)
+        point = CGPointMake((bounds.width - size.width) / 2, point.y + 20)
+        text.drawAtPoint(point, withAttributes: fontAttr)
+        
+        text = NSString(string: String(format:"Group:%2d", group))
+        size = text.sizeWithAttributes(fontAttr)
+        point = CGPointMake((bounds.width - size.width) / 2, point.y + 20)
+        text.drawAtPoint(point, withAttributes: fontAttr)
+        
+        text = NSString(string: String(format:"Discovered: %@", discoverYear))
+        size = text.sizeWithAttributes(fontAttr)
+        point = CGPointMake((bounds.width - size.width) / 2, point.y + 20)
+        text.drawAtPoint(point, withAttributes: fontAttr)
     }
 }
 
