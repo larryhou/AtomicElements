@@ -181,6 +181,12 @@ class ImageReflectionView:UIView
 {
     @IBInspectable
     var image:UIImage!
+    {
+        didSet
+        {
+            setNeedsDisplay()
+        }
+    }
     
     override init(frame: CGRect)
     {

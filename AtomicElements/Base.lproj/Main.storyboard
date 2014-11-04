@@ -89,8 +89,8 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="256" id="fa8-lV-JIa"/>
-                                    <constraint firstAttribute="height" constant="256" id="zaF-my-nmx"/>
+                                    <constraint firstAttribute="width" constant="256" id="gkk-1Z-vaH"/>
+                                    <constraint firstAttribute="height" constant="256" id="xwz-py-ZZa"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="Artificial_256.png"/>
@@ -100,8 +100,8 @@
                                 <rect key="frame" x="172" y="388" width="256" height="90"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="256" id="ZO1-y2-w3X"/>
-                                    <constraint firstAttribute="height" constant="90" id="rmF-5h-VCa"/>
+                                    <constraint firstAttribute="width" constant="256" id="9d4-rU-Vog"/>
+                                    <constraint firstAttribute="height" constant="90" id="OZj-Js-WYY"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="Artificial_256.png"/>
@@ -111,10 +111,10 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="BzO-Pz-kTc" firstAttribute="top" secondItem="qfg-g8-U6M" secondAttribute="bottom" id="BKm-Th-2S5"/>
-                            <constraint firstAttribute="centerY" secondItem="qfg-g8-U6M" secondAttribute="centerY" constant="40" id="HeC-2j-wiD"/>
-                            <constraint firstAttribute="centerX" secondItem="qfg-g8-U6M" secondAttribute="centerX" id="LFw-3r-VT0"/>
-                            <constraint firstAttribute="centerX" secondItem="BzO-Pz-kTc" secondAttribute="centerX" id="rs6-Zb-7vV"/>
+                            <constraint firstItem="BzO-Pz-kTc" firstAttribute="top" secondItem="qfg-g8-U6M" secondAttribute="bottom" id="4XB-a9-NE1"/>
+                            <constraint firstAttribute="centerY" secondItem="qfg-g8-U6M" secondAttribute="centerY" constant="40" id="8ph-R4-2Us"/>
+                            <constraint firstAttribute="centerX" secondItem="qfg-g8-U6M" secondAttribute="centerX" id="JAi-Yq-jHi"/>
+                            <constraint firstAttribute="centerX" secondItem="BzO-Pz-kTc" secondAttribute="centerX" id="QrG-a7-kQh"/>
                         </constraints>
                     </view>
                     <toolbarItems/>

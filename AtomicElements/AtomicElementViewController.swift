@@ -19,6 +19,7 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
     @IBOutlet var reflactionView:ImageReflectionView!
     
     var flippedView:FlippedAtomicElementView!
+    var frame:CGRect!
     
     var element:AtomicElement!
     var flipIndicatorButton:UIButton!
@@ -26,6 +27,12 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        frame = atomicView.frame
+//        atomicView.removeConstraints(atomicView.constraints())
+        atomicView.frame = frame
+        
+        println(atomicView.frame)
         
         atomicView.delegate = self
         atomicView.backgroundImage = element.stateImageForAtomicElementView
@@ -37,8 +44,8 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
         reflactionView.image = atomicView.getContextImage()
         
         flippedView = NSBundle.mainBundle().loadNibNamed("FlippedAtomicElementView", owner: self, options: nil).first as FlippedAtomicElementView
-        flippedView.frame = atomicView.frame
         flippedView.delegate = self
+        flippedView.frame = frame
         
         flipIndicatorButton = UIButton(frame: CGRectMake(0, 0, 30, 30))
         flipIndicatorButton.setBackgroundImage(UIImage(named: BUTTON_ITEM_IMAGE), forState: UIControlState.Normal)
@@ -77,20 +84,22 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
         
         if target == atomicView
         {
-            UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromRight, forView: atomicView, cache: true)
-            atomicView.removeFromSuperview()
+            UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromRight, forView: self.view, cache: true)
+            atomicView.hidden = true
             view.addSubview(flippedView)
+            println(flippedView.frame)
             
             reflactionView.image = flippedView.getContextImage()
         }
         else
         if target == flippedView
         {
-            UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: flippedView, cache: true)
+            UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: self.view, cache: true)
             flippedView.removeFromSuperview()
-            view.addSubview(atomicView)
+            atomicView.hidden = false
+            println(atomicView.frame)
             
-            reflactionView.image = UIImage(named: BUTTON_ITEM_IMAGE)
+            reflactionView.image = atomicView.getContextImage()
         }
         
         UIView.commitAnimations()
