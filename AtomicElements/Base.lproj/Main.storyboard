@@ -117,6 +117,8 @@
                             <constraint firstAttribute="centerX" secondItem="BzO-Pz-kTc" secondAttribute="centerX" id="rs6-Zb-7vV"/>
                         </constraints>
                     </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="atomicView" destination="qfg-g8-U6M" id="5xA-o2-nuV"/>
                         <outlet property="reflactionView" destination="BzO-Pz-kTc" id="vgY-86-p2f"/>
