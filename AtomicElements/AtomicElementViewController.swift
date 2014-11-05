@@ -19,7 +19,6 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
     @IBOutlet var reflactionView:ImageReflectionView!
     
     var flippedView:FlippedAtomicElementView!
-    var frame:CGRect!
     
     var element:AtomicElement!
     var flipIndicatorButton:UIButton!
@@ -27,12 +26,6 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        frame = atomicView.frame
-//        atomicView.removeConstraints(atomicView.constraints())
-        atomicView.frame = frame
-        
-        println(atomicView.frame)
         
         atomicView.delegate = self
         atomicView.backgroundImage = element.stateImageForAtomicElementView
@@ -43,9 +36,7 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
         
         reflactionView.image = atomicView.getContextImage()
         
-        flippedView = NSBundle.mainBundle().loadNibNamed("FlippedAtomicElementView", owner: self, options: nil).first as FlippedAtomicElementView
-        flippedView.delegate = self
-        flippedView.frame = frame
+        setupFlippedView()
         
         flipIndicatorButton = UIButton(frame: CGRectMake(0, 0, 30, 30))
         flipIndicatorButton.setBackgroundImage(UIImage(named: BUTTON_ITEM_IMAGE), forState: UIControlState.Normal)
@@ -53,6 +44,45 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
         let flipButtonBarItem = UIBarButtonItem(customView: flipIndicatorButton)
         flipIndicatorButton.addTarget(self, action: "didClickRightButton", forControlEvents: UIControlEvents.TouchDown)
         navigationItem.setRightBarButtonItem(flipButtonBarItem, animated: true)
+    }
+    
+    func setupFlippedView()
+    {
+        flippedView = NSBundle.mainBundle().loadNibNamed("FlippedAtomicElementView", owner: self, options: nil).first as FlippedAtomicElementView
+        view.addSubview(flippedView)
+        flippedView.delegate = self
+        
+        var constrain:NSLayoutConstraint
+        
+        // 限制宽度为256
+        constrain = NSLayoutConstraint(item: flippedView,
+                                  attribute: NSLayoutAttribute.Width, relatedBy: NSLayoutRelation.Equal,
+                                     toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute,
+                                 multiplier: 1, constant: 256)
+        flippedView.addConstraint(constrain)
+        
+        // 限制高度为256
+        constrain = NSLayoutConstraint(item: flippedView,
+                                  attribute: NSLayoutAttribute.Height, relatedBy: NSLayoutRelation.Equal,
+                                     toItem: nil, attribute: NSLayoutAttribute.NotAnAttribute,
+                                 multiplier: 1, constant: 256)
+        flippedView.addConstraint(constrain)
+        
+        
+        // 相对父级容器水平居中
+        constrain = NSLayoutConstraint(item: flippedView,
+                                  attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal,
+                                     toItem: self.view, attribute: NSLayoutAttribute.CenterX,
+                                 multiplier: 1, constant: 0)
+        view.addConstraint(constrain)
+        
+        // 相对父级容器垂直居中
+        constrain = NSLayoutConstraint(item: flippedView,
+                                  attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal,
+                                     toItem: self.view, attribute: NSLayoutAttribute.CenterY,
+                                 multiplier: 1, constant: 0)
+        view.addConstraint(constrain)
+        
     }
     
     func didClickRightButton()
@@ -87,7 +117,6 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
             UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromRight, forView: self.view, cache: true)
             atomicView.hidden = true
             view.addSubview(flippedView)
-            println(flippedView.frame)
             
             reflactionView.image = flippedView.getContextImage()
         }
@@ -97,7 +126,6 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
             UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: self.view, cache: true)
             flippedView.removeFromSuperview()
             atomicView.hidden = false
-            println(atomicView.frame)
             
             reflactionView.image = atomicView.getContextImage()
         }
