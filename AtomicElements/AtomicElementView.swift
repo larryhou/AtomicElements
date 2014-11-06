@@ -93,6 +93,7 @@ class AtomicElementView:UIView
         CGContextConcatCTM(context, flipVertical)
         
         layer.drawInContext(context)
+        
         var bitmapData = CGBitmapContextCreateImage(context)
         return UIImage(CGImage: bitmapData, scale: 1, orientation: UIImageOrientation.DownMirrored)!
     }
@@ -108,7 +109,7 @@ class FlippedAtomicElementView:AtomicElementView
     var state:String = "Gas"
     
     @IBInspectable
-    var period:Double = 6
+    var period:Int = 6
     
     @IBInspectable
     var group:Int = 5
@@ -159,12 +160,12 @@ class FlippedAtomicElementView:AtomicElementView
         point = CGPointMake((bounds.width - size.width) / 2, point.y + 20)
         text.drawAtPoint(point, withAttributes: fontAttr)
         
-        text = NSString(string: String(format:"Period:%2.0f", period))
+        text = NSString(string: String(format:"Period: %2d", period))
         size = text.sizeWithAttributes(fontAttr)
         point = CGPointMake((bounds.width - size.width) / 2, point.y + 20)
         text.drawAtPoint(point, withAttributes: fontAttr)
         
-        text = NSString(string: String(format:"Group:%2d", group))
+        text = NSString(string: String(format:"Group: %2d", group))
         size = text.sizeWithAttributes(fontAttr)
         point = CGPointMake((bounds.width - size.width) / 2, point.y + 20)
         text.drawAtPoint(point, withAttributes: fontAttr)

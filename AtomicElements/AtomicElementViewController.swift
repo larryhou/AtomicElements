@@ -49,8 +49,21 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
     func setupFlippedView()
     {
         flippedView = NSBundle.mainBundle().loadNibNamed("FlippedAtomicElementView", owner: self, options: nil).first as FlippedAtomicElementView
+        flippedView.setTranslatesAutoresizingMaskIntoConstraints(false)
         view.addSubview(flippedView)
         flippedView.delegate = self
+        flippedView.hidden = true
+        
+        flippedView.backgroundImage = element.stateImageForAtomicElementView
+        flippedView.atomicNumber = element.atomicNumber
+        flippedView.symbol = element.symbol
+        flippedView.name = element.name
+        flippedView.group = element.group
+        flippedView.period = element.period
+        flippedView.state = element.state
+        flippedView.atomicWeight = element.atomicWeight
+        flippedView.discoverYear = element.discoverYear
+        flippedView.setNeedsDisplay()
         
         var constrain:NSLayoutConstraint
         
@@ -72,15 +85,15 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
         // 相对父级容器水平居中
         constrain = NSLayoutConstraint(item: flippedView,
                                   attribute: NSLayoutAttribute.CenterX, relatedBy: NSLayoutRelation.Equal,
-                                     toItem: self.view, attribute: NSLayoutAttribute.CenterX,
+                                     toItem: view, attribute: NSLayoutAttribute.CenterX,
                                  multiplier: 1, constant: 0)
         view.addConstraint(constrain)
         
         // 相对父级容器垂直居中
-        constrain = NSLayoutConstraint(item: flippedView,
+        constrain = NSLayoutConstraint(item: view,
                                   attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal,
-                                     toItem: self.view, attribute: NSLayoutAttribute.CenterY,
-                                 multiplier: 1, constant: 0)
+                                     toItem: flippedView, attribute: NSLayoutAttribute.CenterY,
+                                 multiplier: 1, constant: 40)
         view.addConstraint(constrain)
         
     }
@@ -116,7 +129,7 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
         {
             UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromRight, forView: self.view, cache: true)
             atomicView.hidden = true
-            view.addSubview(flippedView)
+            flippedView.hidden = !atomicView.hidden
             
             reflactionView.image = flippedView.getContextImage()
         }
@@ -124,8 +137,8 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
         if target == flippedView
         {
             UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: self.view, cache: true)
-            flippedView.removeFromSuperview()
             atomicView.hidden = false
+            flippedView.hidden = !atomicView.hidden
             
             reflactionView.image = atomicView.getContextImage()
         }
