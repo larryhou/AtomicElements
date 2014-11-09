@@ -97,11 +97,11 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzO-Pz-kTc" customClass="ImageReflectionView" customModule="AtomicElements" customModuleProvider="target">
-                                <rect key="frame" x="172" y="388" width="256" height="90"/>
+                                <rect key="frame" x="172" y="388" width="256" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="9d4-rU-Vog"/>
-                                    <constraint firstAttribute="height" constant="90" id="OZj-Js-WYY"/>
+                                    <constraint firstAttribute="height" constant="100" id="OZj-Js-WYY"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="image" keyPath="image" value="Artificial_256.png"/>

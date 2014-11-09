@@ -46,6 +46,7 @@ class AtomicElementView:UIView
     private func setup()
     {
         backgroundColor = UIColor.clearColor()
+        setTranslatesAutoresizingMaskIntoConstraints(false)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: "didTap:")
         addGestureRecognizer(tapGesture)
@@ -86,22 +87,21 @@ class AtomicElementView:UIView
     //MARK: 获取截图
     func getContextImage()->UIImage
     {
-        var colorSpace = CGColorSpaceCreateDeviceRGB()
-        var context = CGBitmapContextCreate(nil, UInt(bounds.width), UInt(bounds.height), 8, 0, colorSpace, CGBitmapInfo(CGImageAlphaInfo.PremultipliedLast.rawValue))
+        UIGraphicsBeginImageContext(bounds.size)
+        var context = UIGraphicsGetCurrentContext()
         
-        var flipVertical = CGAffineTransformMake(1, 0, 0, -1, 0, bounds.height)
-        CGContextConcatCTM(context, flipVertical)
+        layer.renderInContext(context)
         
-        layer.drawInContext(context)
+        var result = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
         
-        var bitmapData = CGBitmapContextCreateImage(context)
-        return UIImage(CGImage: bitmapData, scale: 1, orientation: UIImageOrientation.DownMirrored)!
+        return result
     }
 }
 
 @IBDesignable
 class FlippedAtomicElementView:AtomicElementView
-{
+{    
     @IBInspectable
     var atomicWeight:Double = 108
     
@@ -175,6 +175,7 @@ class FlippedAtomicElementView:AtomicElementView
         point = CGPointMake((bounds.width - size.width) / 2, point.y + 20)
         text.drawAtPoint(point, withAttributes: fontAttr)
     }
+    
 }
 
 @IBDesignable

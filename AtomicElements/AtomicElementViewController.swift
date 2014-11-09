@@ -27,6 +27,7 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
     {
         super.viewDidLoad()
         
+        
         atomicView.delegate = self
         atomicView.backgroundImage = element.stateImageForAtomicElementView
         atomicView.atomicNumber = element.atomicNumber
@@ -49,7 +50,6 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
     func setupFlippedView()
     {
         flippedView = NSBundle.mainBundle().loadNibNamed("FlippedAtomicElementView", owner: self, options: nil).first as FlippedAtomicElementView
-        flippedView.setTranslatesAutoresizingMaskIntoConstraints(false)
         view.addSubview(flippedView)
         flippedView.delegate = self
         flippedView.hidden = true
