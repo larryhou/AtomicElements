@@ -23,6 +23,8 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
     var element:AtomicElement!
     var flipIndicatorButton:UIButton!
     
+    var needFlip2Front = false
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -100,23 +102,17 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
     
     func didClickRightButton()
     {
-        if atomicView.superview != nil
-        {
-            flipAtomicView(atomicView)
-        }
-        else
-        if flippedView.superview != nil
-        {
-            flipAtomicView(flippedView)
-        }
+        needFlip2Front = atomicView.hidden
+        flipCurrentView()
     }
     
     func didTap(target: AtomicElementView, sender: UITapGestureRecognizer)
     {
-        flipAtomicView(target)
+        needFlip2Front = target == flippedView ? true : false
+        flipCurrentView()
     }
     
-    func flipAtomicView(target:AtomicElementView)
+    func flipCurrentView()
     {
         flipIndicatorButton.userInteractionEnabled = false
         view.userInteractionEnabled = false
@@ -125,7 +121,7 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
         UIView.setAnimationDuration(FLIP_DURATION)
         UIView.setAnimationDelegate(self)
         
-        if target == atomicView
+        if !needFlip2Front
         {
             UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromRight, forView: self.view, cache: true)
             atomicView.hidden = true
@@ -134,7 +130,6 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
             reflactionView.image = flippedView.getContextImage()
         }
         else
-        if target == flippedView
         {
             UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: self.view, cache: true)
             atomicView.hidden = false
@@ -142,6 +137,28 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
             
             reflactionView.image = atomicView.getContextImage()
         }
+        
+        UIView.commitAnimations()
+        
+        UIView.beginAnimations(nil, context: nil)
+        UIView.setAnimationDuration(FLIP_DURATION)
+        UIView.setAnimationDelegate(self)
+        
+        var stateImage:UIImage
+        
+        if !needFlip2Front
+        {
+            UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromRight, forView: flipIndicatorButton, cache: true)
+            stateImage = element.flipperImageForAtomicElementNavigationItem
+        }
+        else
+        {
+            UIView.setAnimationTransition(UIViewAnimationTransition.FlipFromLeft, forView: flipIndicatorButton, cache: true)
+            stateImage = UIImage(named: BUTTON_ITEM_IMAGE)!
+        }
+        
+        flipIndicatorButton.setBackgroundImage(stateImage, forState: UIControlState.Normal)
+        flipIndicatorButton.setBackgroundImage(stateImage, forState: UIControlState.Highlighted)
         
         UIView.commitAnimations()
     }

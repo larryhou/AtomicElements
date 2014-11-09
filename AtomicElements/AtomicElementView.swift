@@ -101,7 +101,7 @@ class AtomicElementView:UIView
 
 @IBDesignable
 class FlippedAtomicElementView:AtomicElementView
-{    
+{
     @IBInspectable
     var atomicWeight:Double = 108
     
