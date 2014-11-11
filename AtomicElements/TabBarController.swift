@@ -17,6 +17,8 @@ class TabBarController:UITabBarController
         
         PeriodicElements.sharedPeriodicElements
         
+        var tableViewController:ElementsTableViewController
+        
         var storyboard = UIStoryboard(name: "Main", bundle: nil)
         for rootController in self.viewControllers! as [UINavigationController]
         {
@@ -25,18 +27,23 @@ class TabBarController:UITabBarController
             
             if rootController.topViewController == nil
             {
-                var tableViewController = storyboard.instantiateViewControllerWithIdentifier("AtomicTableView") as ElementsTableViewController
-                switch rootController.tabBarItem.title!
-                {
-                    case "Number":
-                        tableViewController.dataSource = NumberAtomicDataSource()
-                        break
-                    
-                    default:
-                        break
-                }
-                
+                tableViewController = storyboard.instantiateViewControllerWithIdentifier("AtomicTableView") as ElementsTableViewController
                 rootController.viewControllers = [tableViewController]
+            }
+            
+            tableViewController = rootController.viewControllers.last as ElementsTableViewController
+            
+            println(rootController.tabBarItem.title!)
+            switch rootController.tabBarItem.title!
+            {
+                case "Number":
+                    tableViewController.dataSource = NumberAtomicDataSource()
+                    
+                case "Name":
+                    tableViewController.dataSource = NameAtomicDataSource()
+                    
+                default:
+                    break
             }
         }
     }

@@ -4,4 +4,5 @@ import UIKit
 
 let image = UIImage(named: "4.png")
 
-var list = ["larryhou"]
+var list = ["name":"larryhou", "age":"12"]
+list.keys

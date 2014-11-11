@@ -27,6 +27,7 @@ class ElementsTableViewController:UITableViewController
         tableView.dataSource = dataSource
     }
     
+    
     //MARK: assign a fixed height for custom cell
     override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
