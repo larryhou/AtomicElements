@@ -32,8 +32,6 @@ class TabBarController:UITabBarController
             }
             
             tableViewController = rootController.viewControllers.last as ElementsTableViewController
-            
-            println(rootController.tabBarItem.title!)
             switch rootController.tabBarItem.title!
             {
                 case "Number":
