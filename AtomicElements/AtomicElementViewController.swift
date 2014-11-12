@@ -95,7 +95,7 @@ class AtomicElementViewController:UIViewController, AtomicElementViewDelegate
         constrain = NSLayoutConstraint(item: view,
                                   attribute: NSLayoutAttribute.CenterY, relatedBy: NSLayoutRelation.Equal,
                                      toItem: flippedView, attribute: NSLayoutAttribute.CenterY,
-                                 multiplier: 1, constant: 40)
+                                 multiplier: 1, constant: 0)
         view.addConstraint(constrain)
         
     }

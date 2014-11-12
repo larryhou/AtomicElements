@@ -25,7 +25,6 @@
 		6B2BD1FD19FDFC2300D15E64 /* Solid_30.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2BD1E919FDFC2300D15E64 /* Solid_30.png */; };
 		6B2BD1FE19FDFC2300D15E64 /* Solid_37.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2BD1EA19FDFC2300D15E64 /* Solid_37.png */; };
 		6B2BD1FF19FDFC2300D15E64 /* Solid_256.png in Resources */ = {isa = PBXBuildFile; fileRef = 6B2BD1EB19FDFC2300D15E64 /* Solid_256.png */; };
-		6BDE21C519FF6504005B880E /* NumberAtomicDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE21C419FF6504005B880E /* NumberAtomicDataSource.swift */; };
 		6BDE21F81A00B97F005B880E /* AtomicElementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE21F71A00B97F005B880E /* AtomicElementViewController.swift */; };
 		6BDE21FA1A00BC3D005B880E /* AtomicElementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BDE21F91A00BC3D005B880E /* AtomicElementView.swift */; };
 		6BDE21FD1A072F35005B880E /* FlippedAtomicElementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BDE21FB1A072F35005B880E /* FlippedAtomicElementView.xib */; };
@@ -82,7 +81,6 @@
 		6B2BD1E919FDFC2300D15E64 /* Solid_30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Solid_30.png; path = Images/Solid_30.png; sourceTree = "<group>"; };
 		6B2BD1EA19FDFC2300D15E64 /* Solid_37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Solid_37.png; path = Images/Solid_37.png; sourceTree = "<group>"; };
 		6B2BD1EB19FDFC2300D15E64 /* Solid_256.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Solid_256.png; path = Images/Solid_256.png; sourceTree = "<group>"; };
-		6BDE21C419FF6504005B880E /* NumberAtomicDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberAtomicDataSource.swift; sourceTree = "<group>"; };
 		6BDE21F71A00B97F005B880E /* AtomicElementViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicElementViewController.swift; sourceTree = "<group>"; };
 		6BDE21F91A00BC3D005B880E /* AtomicElementView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AtomicElementView.swift; sourceTree = "<group>"; };
 		6BDE21FC1A072F35005B880E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/FlippedAtomicElementView.xib; sourceTree = "<group>"; };
@@ -131,15 +129,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6B2BD1D319FDF92500D15E64 /* data */ = {
-			isa = PBXGroup;
-			children = (
-				DBAD3C6F19FD13B6008DF72E /* AtomicDataSource.swift */,
-				6BDE21C419FF6504005B880E /* NumberAtomicDataSource.swift */,
-			);
-			name = data;
-			sourceTree = "<group>";
-		};
 		6BDE21F61A00B947005B880E /* detailView */ = {
 			isa = PBXGroup;
 			children = (
@@ -198,7 +187,7 @@
 		DBAD3C6E19FD137B008DF72E /* tableView */ = {
 			isa = PBXGroup;
 			children = (
-				6B2BD1D319FDF92500D15E64 /* data */,
+				DBAD3C6F19FD13B6008DF72E /* AtomicDataSource.swift */,
 				6B2BD1D419FDF94800D15E64 /* AtomicTableViewCell.swift */,
 				DB9D30A319FFF6C20036024B /* ElementsTableViewController.swift */,
 			);
@@ -407,7 +396,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BDE21C519FF6504005B880E /* NumberAtomicDataSource.swift in Sources */,
 				DBAD3C6619FCFF7B008DF72E /* NavgationController.swift in Sources */,
 				DBAD3C7319FD16D9008DF72E /* AtomicElement.swift in Sources */,
 				DB9D30A419FFF6C20036024B /* ElementsTableViewController.swift in Sources */,

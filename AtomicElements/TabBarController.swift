@@ -39,6 +39,12 @@ class TabBarController:UITabBarController
                     
                 case "Name":
                     tableViewController.dataSource = NameAtomicDataSource()
+                
+                case "State":
+                    tableViewController.dataSource = StateAtomicDataSource()
+                
+                case "Symbol":
+                    tableViewController.dataSource = SymbolAtomicDataSource()
                     
                 default:
                     break

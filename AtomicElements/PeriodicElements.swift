@@ -23,12 +23,14 @@ class PeriodicElements
     var elements:[AtomicElement]
     var nameIndexGroupedMap:[String:[AtomicElement]]
     var stateGroupedMap:[String:[AtomicElement]]
+    var symbolIndexGroupedMap:[String:[AtomicElement]]
     
     init()
     {
         self.elements = []
         self.nameIndexGroupedMap = [:]
         self.stateGroupedMap = [:]
+        self.symbolIndexGroupedMap = [:]
         
         var path = NSBundle.mainBundle().pathForResource("Elements", ofType: "plist")
         var list:NSArray = NSArray(contentsOfFile: path!)!
@@ -44,8 +46,14 @@ class PeriodicElements
             {
                 nameIndexGroupedMap.updateValue([AtomicElement](), forKey: letter)
             }
-            
             nameIndexGroupedMap[letter]?.append(item)
+            
+            letter = item.symbol.substringToIndex(advance(item.name.startIndex, 1))
+            if symbolIndexGroupedMap[letter] == nil
+            {
+                symbolIndexGroupedMap.updateValue([AtomicElement](), forKey: letter)
+            }
+            symbolIndexGroupedMap[letter]?.append(item)
             
             if stateGroupedMap[item.state] == nil
             {
@@ -63,6 +71,11 @@ class PeriodicElements
         for (key, _) in stateGroupedMap
         {
             stateGroupedMap[key]?.sort({$0.name < $1.name})
+        }
+        
+        for (key, _) in symbolIndexGroupedMap
+        {
+            symbolIndexGroupedMap[key]?.sort({$0.symbol < $1.symbol})
         }
         
         elements.sort({$0.name < $1.name})

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zmk-xi-g37">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B17" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="zmk-xi-g37">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
@@ -85,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qfg-g8-U6M" customClass="AtomicElementView" customModule="AtomicElements" customModuleProvider="target">
-                                <rect key="frame" x="172" y="132" width="256" height="256"/>
+                                <rect key="frame" x="172" y="172" width="256" height="256"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -97,7 +97,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BzO-Pz-kTc" customClass="ImageReflectionView" customModule="AtomicElements" customModuleProvider="target">
-                                <rect key="frame" x="172" y="388" width="256" height="100"/>
+                                <rect key="frame" x="172" y="428" width="256" height="100"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="256" id="9d4-rU-Vog"/>
@@ -112,7 +112,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="BzO-Pz-kTc" firstAttribute="top" secondItem="qfg-g8-U6M" secondAttribute="bottom" id="4XB-a9-NE1"/>
-                            <constraint firstAttribute="centerY" secondItem="qfg-g8-U6M" secondAttribute="centerY" constant="40" id="8ph-R4-2Us"/>
+                            <constraint firstAttribute="centerY" secondItem="qfg-g8-U6M" secondAttribute="centerY" id="8ph-R4-2Us"/>
                             <constraint firstAttribute="centerX" secondItem="qfg-g8-U6M" secondAttribute="centerX" id="JAi-Yq-jHi"/>
                             <constraint firstAttribute="centerX" secondItem="BzO-Pz-kTc" secondAttribute="centerX" id="QrG-a7-kQh"/>
                         </constraints>

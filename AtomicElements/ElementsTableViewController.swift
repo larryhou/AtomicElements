@@ -25,6 +25,7 @@ class ElementsTableViewController:UITableViewController
         
         tableView.delegate = self
         tableView.dataSource = dataSource
+        tableView.sectionHeaderHeight = 30
     }
     
     
@@ -43,6 +44,7 @@ class ElementsTableViewController:UITableViewController
             
             var viewController = segue.destinationViewController as AtomicElementViewController
             viewController.element = dataSource.atomicElementForIndexPath(indexPath)
+            viewController.hidesBottomBarWhenPushed = true
         }
     }
 }
